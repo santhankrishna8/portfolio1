@@ -2,28 +2,97 @@
 <html>
     <head>
         <title>Trading Charts</title>
-        
     </head>
     <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="n">
-            <a>Home</a>
-            <a href="#s">Sensex</a>
-            <a href="#tata">Tata</a>
-            <a href="#usdinr">USD-INR</a>
+            <div class="logo">
+            <img style="height:100px;width:300px;" src="https://sams.edu.in/wp-content/uploads/2020/08/Sambhram-Academy-of-Management-Studies.jpg"></div>
+            <a href="#home">Home</a>
+            
+            <div class="menu">
+            
+            <div class="subnav">
+            <button class="subnavbtn" href="https://www.moneycontrol.com/stocksmarketsindia/"target="_blank">StockMarket-Index <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-c">
+                <ul style="color:white;">
+                    <a>Indian Indices</a>
+                    <a>Global Indices</a>
+                    <a>Top Gainers</a>
+                    <a>Top Loosers</a>
+                </ul>
+            </div>
+        </div>
+            </div>
+            <a href="https://instantforex.icicibank.com/instantforex/forms/MicroCardRateView.aspx" target="_blank">Forex</a>
+            <a href=https://ibjarates.com/ target="_blank">Bullion Market</a>
+            <a href="https://www.indiabudget.gov.in/doc/bh1.pdf"target="_blank" >Budget 2024</a>
+            <a href="https://www.businesstoday.in/markets" target="_blank">Market Watch</a>
+            </div>
             <style>
+                button{
+                    background-color: black;
+                    color:white;
+                    font-family: monospace;
+                }
+                .subnav-c{
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    background-color:black;
+                    width: 100%;
+                    z-index: 1;
+                }
+                .subnav-c a {
+                   display: flex;
+                   flex-direction: column;
+                   color:rgb(126, 6, 6) ;
+                   text-decoration: none;
+                }
+  
+                .subnav-c a:hover {
+                    background-color: #eee;
+                    color: black;
+                 }
+  
+                .subnav:hover .subnav-c {
+                  display: flex;
+                     flex-direction: column;
+                    width:20%;
+                      margin-left: 15rem;
+
+                       }
+  
+
+                
                 .n{
                     display: flex;
                     
                     background-color: black;
                     font-family: monospace;
-                    
+                    align-items: center;
                     margin:1rem;
                 }
                 .n a{
                     text-decoration: none;
                     color:white;
-                    margin:2rem;
+                    margin:1rem;
                     font-size: 1.2rem;
+                }
+                .t{
+                    display:flex;
+                
+                }
+                .d{
+                    flex:1.5;
+                }
+                .news{
+                    flex:1;
+                    height:50vh;
+
+                }
+                h1{
+                    text-align: center;
                 }
                 @media screen and (max-width:36rem){
                     .n a{
@@ -38,47 +107,23 @@
                 }
             </style>
         </div>
-        <h1 style="font-family: monospace;text-align: center;">SENSEX</h1>
-        <div id="s" style="margin-top: -35rem;" >
-            <div class="tradingview-widget-container" style="height: 600px; width: 1400px;"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-                "symbol": "INDEX:SENSEX",
-                "interval": "D",
-                "fullscreen": false,
-                "style":2,
-                "container_id": "tradingview-widget-container"
-            });
-            </script>
+        <div id="home">
+            <h1 style="text-align: center;color:red">SAMS-Department of MBA</h1>
         </div>
-        <br><br><br><br><br>
-        <h1 style="font-family: monospace;text-align: center;">TATA CONSULTANCY SERVICES</h1>
-        <div id="tata" style="margin-top: -20rem;">
-            <div class="tradingview-widget-container" style="height: 400px; width: 800px;display: flex;"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-                "symbol": "TCS", // Replace with your chosen symbol
-                "interval": "D",
-                "fullscreen": false,
-                "container_id": "tradingview-widget-container"
-            });
-            </script>
-        </div>
-        <br><br><br><br><br>
-        <h1 style="font-family: monospace;text-align: center;">USD TO INR</h1>
-        <div id="usdinr">
-            <div class="tradingview-widget-container" style="height: 400px; width: 800px;margin-top: -20rem;"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-            <script type="text/javascript">
-            new TradingView.widget({
-                "symbol": "FX_IDC:USDINR",
-                "interval": "D",
-                "fullscreen": false,
-                "container_id": "tradingview-widget-container"
-            });
-            </script>
-        </div>
+        <div class="t">
+            <div class="d">
+
+            </div>
+            <div class="news"style="background-color: beige;">
+            <h1 >News</h1>
+            <ul>
+                <li>hi</li>
+                <li>welcome</li>
+            </ul>
+            </div>
+       </div>
+        
+        
+        
     </body>
 </html>
