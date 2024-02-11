@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trading Charts</title>
+        
+    </head>
+    <body>
+        <div class="n">
+            <a>Home</a>
+            <a href="#s">Sensex</a>
+            <a href="#tata">Tata</a>
+            <a href="#usdinr">USD-INR</a>
+            <style>
+                .n{
+                    display: flex;
+                    
+                    background-color: black;
+                    font-family: monospace;
+                    
+                    margin:1rem;
+                }
+                .n a{
+                    text-decoration: none;
+                    color:white;
+                    margin:2rem;
+                    font-size: 1.2rem;
+                }
+                @media screen and (max-width:36rem){
+                    .n a{
+                        font-size: 1rem;
+                        margin:1rem;
+
+                    }
+                    .tradingview-widget-container{
+                        height: 100px;
+                        width:30%;
+                    }
+                }
+            </style>
+        </div>
+        <h1 style="font-family: monospace;text-align: center;">SENSEX</h1>
+        <div id="s" style="margin-top: -35rem;" >
+            <div class="tradingview-widget-container" style="height: 600px; width: 1400px;"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget({
+                "symbol": "INDEX:SENSEX",
+                "interval": "D",
+                "fullscreen": false,
+                "style":2,
+                "container_id": "tradingview-widget-container"
+            });
+            </script>
+        </div>
+        <br><br><br><br><br>
+        <h1 style="font-family: monospace;text-align: center;">TATA CONSULTANCY SERVICES</h1>
+        <div id="tata" style="margin-top: -20rem;">
+            <div class="tradingview-widget-container" style="height: 400px; width: 800px;display: flex;"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget({
+                "symbol": "TCS", // Replace with your chosen symbol
+                "interval": "D",
+                "fullscreen": false,
+                "container_id": "tradingview-widget-container"
+            });
+            </script>
+        </div>
+        <br><br><br><br><br>
+        <h1 style="font-family: monospace;text-align: center;">USD TO INR</h1>
+        <div id="usdinr">
+            <div class="tradingview-widget-container" style="height: 400px; width: 800px;margin-top: -20rem;"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+            <script type="text/javascript">
+            new TradingView.widget({
+                "symbol": "FX_IDC:USDINR",
+                "interval": "D",
+                "fullscreen": false,
+                "container_id": "tradingview-widget-container"
+            });
+            </script>
+        </div>
+    </body>
+</html>
